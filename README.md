@@ -98,4 +98,28 @@ dependencies {
     ...
 }
 ```
+### 外置插件使用
+将集成插件化的apk打包放在服务器
+在需要打开的地方调用下面方法：
+
+```
+MPluginHelper.getInstance().openPlugin(this, "survey", "com.gsww.pluginapk.PluginActivity", new MPluginHelper.InstallListener() {
+
+});
+
+```
+下载的方法在工具类中已经写好
+
+升级的时候根据后台获取的版本号进行判断
+
+```
+PluginInfo info = RePlugin.getPluginInfo(pluginName);
+            //版本号由 后台接口获得，然后进行对比，插件版本低于接口的版本就下载更新
+            if (info.getVersion() < 2) {
+
+                //http://36.40.85.189:8081/authApi/feign/download
+                downPlugin(context, "https://ali-fir-pro-binary.fir.im/fa819d2b28faa326794161d24e1a3b30e9ebf12e.apk?auth_key=1582198033-0-0-e8923b8d70ab526ab4953802a4c5543e", pluginName, activityName, true);
+            }
+```
+
 

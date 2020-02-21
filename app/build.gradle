@@ -4,7 +4,7 @@ android {
     compileSdkVersion deps.compile_sdk
     buildToolsVersion deps.build_tools
     defaultConfig {
-        applicationId "com.wzm.newpluginapp"
+        applicationId "com.gsww.newpluginapp"
         minSdkVersion deps.min_sdk
         targetSdkVersion deps.target_sdk
         versionCode 1
@@ -40,6 +40,13 @@ android {
 apply plugin: 'replugin-host-gradle'
 repluginHostConfig {
     useAppCompat = true
+    /**
+     * 背景不透明的坑的数量
+     */
+    countNotTranslucentStandard = 6
+    countNotTranslucentSingleTop = 2
+    countNotTranslucentSingleTask = 3
+    countNotTranslucentSingleInstance = 2
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

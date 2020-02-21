@@ -5,7 +5,7 @@ android {
     buildToolsVersion deps.build_tools
 
     defaultConfig {
-        applicationId "com.wzm.pluginapk"
+        applicationId "com.gsww.pluginapk"
         minSdkVersion deps.min_sdk
         targetSdkVersion deps.target_sdk
         versionCode 1
@@ -26,7 +26,7 @@ android {
             minifyEnabled false
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            def surveyUrl='http://36.40.85.189:8011/wjdcimplementation/wjdc/'
+            def surveyUrl='http://36.40.85.189:8011/wjdcApi/wjdc/'
             def calculateUrl='http://36.40.85.189:8081/#/androidIncome'
             buildConfigField ("String", "surveyUrl", "\"${surveyUrl}\"")
             buildConfigField ("String", "calculateUrl", "\"${calculateUrl}\"")
@@ -35,7 +35,7 @@ android {
         debug{
             minifyEnabled false
             signingConfig signingConfigs.release
-            def surveyUrl='http://36.40.85.189:8011/wjdcimplementation/wjdc/'
+            def surveyUrl='http://36.40.85.189:8011/wjdcApi/wjdc/'
             def calculateUrl='http://36.40.85.189:8081/#/androidIncome'
             buildConfigField ("String", "surveyUrl", "\"${surveyUrl}\"")
             buildConfigField ("String", "calculateUrl", "\"${calculateUrl}\"")
