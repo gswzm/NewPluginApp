@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ly_dialog_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/iv_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="身边新闻"
+                android:textSize="18dp"/>
+            <TextView
+                android:id="@+id/iv_size"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/common_blue"
+                android:text="身边新闻"
+                android:textSize="14dp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:background="#cecece" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:alwaysDrawnWithCache="false"
+                android:scrollbars="none"
+                android:fadingEdge= "none"
+                android:overScrollMode="never"
+                android:persistentDrawingCache="none"
+                android:layout_width="fill_parent"
+                android:layout_height="150dip">
+                <TextView
+                    android:id="@+id/iv_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dip"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textSize="14dp"
+                    android:background="@color/white"
+                    android:textColor="@color/font_color_gray"
+                    android:text="1.修复身边新闻首页推荐信息BUG"
+                    android:padding="10dip"/>
+
+            </ScrollView>
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/pb_download"
+                android:layout_width="fill_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/scroll_view"
+                android:progressDrawable="@drawable/ly_progress_bar"
+                android:layout_gravity="center_vertical"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="false" />
+
+            <TextView
+                android:id="@+id/progress_bar_text"
+                android:layout_width="fill_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/scroll_view"
+                android:textColor="#fb4f1b"
+                android:gravity="center"
+                android:textSize="10dp"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_botm"
+            android:layout_marginTop="1dp"
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:background="#cecece" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/ly_user_button_pressed"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:text="立即更新"
+                android:textColor="@color/common_blue"/>
+
+            <View
+                android:id="@+id/line_horiz"
+                android:layout_width="0.4dp"
+                android:layout_marginRight="5dip"
+                android:layout_marginLeft="5dip"
+                android:layout_height="fill_parent"
+                android:background="#cecece" />
+
+            <Button
+                android:id="@+id/btn_cannel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:background="@drawable/ly_user_button_pressed"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="以后再说"
+                android:textColor="@color/common_blue"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

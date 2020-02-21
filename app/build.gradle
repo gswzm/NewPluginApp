@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion deps.compile_sdk
+    buildToolsVersion deps.build_tools
+    defaultConfig {
+        applicationId "com.wzm.newpluginapp"
+        minSdkVersion deps.min_sdk
+        targetSdkVersion deps.target_sdk
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            keyAlias '精准扶贫'
+            keyPassword 'gswwjzfp'
+            storeFile file('../jzfp.keystore')
+            storePassword 'gswwjzfp'
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+apply plugin: 'replugin-host-gradle'
+repluginHostConfig {
+    useAppCompat = true
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.qihoo360.replugin:replugin-host-lib:2.3.2'
+
+    implementation project(':baselibs')
+    //butterknife
+    annotationProcessor deps.butterknife_compiler
+}

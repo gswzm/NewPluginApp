@@ -1,0 +1,77 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion deps.compile_sdk
+    defaultConfig {
+        minSdkVersion deps.min_sdk
+        targetSdkVersion deps.target_sdk
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation deps.junit
+    androidTestImplementation(deps.espresso_core, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api deps.appcompat
+    api deps.recyclerview
+    api deps.constraint
+    api deps.design
+
+    //网络请求
+    api deps.retrofit
+    api deps.converter_gson
+    api deps.adapter_rxjava2
+    api deps.converter_scalars
+    api deps.okhttp3
+    api deps.gson
+    api deps.rxandroid
+    api deps.rxjava
+    //图片预览
+    api deps.PhotoView
+    //图片选择,里面包含glide
+    api deps.PictureSelector
+    //butterknife
+    api deps.butterknife
+    annotationProcessor deps.butterknife_compiler
+    //下拉刷新
+    api deps.SmartRefreshLayout
+    api deps.SmartRefreshHeader
+    //事件总线
+    api deps.eventbus
+    /*U盟统计*/
+    api deps.umeng_com
+    api deps.umeng_an
+    api deps.tablayout
+    //    /*二维码扫描*/
+    //    api deps.bga_qrcode_zxing
+    //树形结构的库
+    api deps.treeview
+    //其他
+    api deps.pickview
+    //图形化库
+    api deps.mpandroidchart
+    api deps.bgabanner
+    //超大图显示控件
+    api deps.bigimageshow
+    //圆角图
+    api deps.roundedimageview
+    api deps.multidex
+    //日历
+    api deps.calendarLib
+    //二维码扫描
+    api deps.bga_qrcode_zxing
+    //gif库
+    api deps.android_gif_drawable
+    api deps.rxpermissions
+    api 'com.leon:lfilepickerlibrary:1.8.0'
+}

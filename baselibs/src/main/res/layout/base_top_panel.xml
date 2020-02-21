@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topPanel"
+    android:layout_width="fill_parent"
+    android:background="@color/top_panel_bg"
+    android:layout_height="50dp">
+    <!-- 加线性布局防止gong了imageView之后错位 -->
+    <LinearLayout
+        android:id="@+id/layout_back"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/tv_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:src="@drawable/top_panel_user" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_search"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:src="@drawable/top_panel_setting" />
+    </LinearLayout>
+
+    <view
+        android:id="@+id/tvTitle"
+        class="com.gsww.baselibs.widget.FTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/layout_search"
+        android:layout_toRightOf="@id/layout_back"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_big" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_back"
+        android:background="@color/common_blue" />
+
+</RelativeLayout>

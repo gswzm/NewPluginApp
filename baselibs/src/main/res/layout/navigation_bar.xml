@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="60dp"
+            android:layout_height="45dip"
+            android:gravity="center"
+            android:layout_centerVertical="true">
+            <com.gsww.baselibs.widget.AlphaTextView
+                android:id="@+id/tv_back"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_marginStart="@dimen/margin_space_15"
+               />
+        </LinearLayout>
+
+        <com.gsww.baselibs.widget.FTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_toStartOf="@+id/tv_right"
+            android:layout_toEndOf="@+id/ll_left"
+            android:textSize="@dimen/font_size_big" />
+
+        <com.gsww.baselibs.widget.AlphaTextView
+            android:id="@+id/tv_right"
+            android:layout_width="60dp"
+            android:layout_height="40dip"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_space_10"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</merge>

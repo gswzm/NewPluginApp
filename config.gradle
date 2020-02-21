@@ -1,0 +1,95 @@
+//全局统一配置文件
+
+ext.deps = [:]; def deps = [:]
+
+/* SDK 版本 */
+deps.min_sdk = 19
+deps.target_sdk = 28
+deps.compile_sdk = 28
+deps.build_tools = '28.0.3'
+
+/* Gradle 插件 */
+deps.gradle_plugin = 'com.android.tools.build:gradle:3.1.4'
+
+/* 测试组件 */
+deps.junit = 'junit:junit:4.12'
+deps.runner = 'com.android.support.test:runner:1.0.2'
+deps.espresso_core = 'com.android.support.test.espresso:espresso-core:3.0.2'
+deps.android_junit_runner = 'android.support.test.runner.AndroidJUnitRunner'
+
+/* 常用组件 */
+def support_version = '28.0.0'
+deps.support_version = support_version
+deps.appcompat = "com.android.support:appcompat-v7:$support_version"
+deps.design = "com.android.support:design:$support_version"
+deps.constraint = 'com.android.support.constraint:constraint-layout:1.1.3'
+deps.recyclerview = "com.android.support:recyclerview-v7:$support_version"
+deps.support_v4 = "com.android.support:support-v4:$support_version"
+
+/* 网络组件 */
+def retrofit2_version = '2.4.0'
+deps.retrofit = "com.squareup.retrofit2:retrofit:$retrofit2_version"
+deps.converter_gson = "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+deps.adapter_rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_version"
+deps.converter_scalars = "com.squareup.retrofit2:converter-scalars:$retrofit2_version"
+deps.okhttp3 = 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+deps.gson = 'com.google.code.gson:gson:2.8.5'
+/* 异步组件 */
+deps.rxandroid = 'io.reactivex.rxjava2:rxandroid:2.0.2'
+deps.rxjava = 'io.reactivex.rxjava2:rxjava:2.2.0'
+
+/* 图片加载组件 */
+deps.android_gif_drawable = 'pl.droidsonroids.gif:android-gif-drawable:1.2.16'
+/* 图片选择组件,里面包含有glide*/
+deps.PictureSelector='com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+/* 图片预览组件 */
+deps.PhotoView = 'com.github.chrisbanes:PhotoView:2.0.0'
+
+/* 注解组件 */
+def butter_knife_version = '9.0.0-rc2'
+deps.butterknife = "com.jakewharton:butterknife:$butter_knife_version"
+deps.butterknife_compiler = "com.jakewharton:butterknife-compiler:$butter_knife_version"
+deps.butterknife_plugin = "com.jakewharton:butterknife-gradle-plugin:$butter_knife_version"
+
+/* 权限请求组件 */
+deps.rxpermissions = 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+/* 下拉刷新组件 */
+deps.SmartRefreshLayout = 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'
+deps.SmartRefreshHeader = 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-20'
+
+deps.pickview = 'com.contrarywind:Android-PickerView:3.2.7'
+deps.eventbus = 'org.greenrobot:eventbus:3.1.1'
+/*U盟统计组件*/
+deps.umeng_com = 'com.umeng.sdk:common:1.5.3'
+deps.umeng_an = 'com.umeng.sdk:analytics:7.5.0'
+//viewpager指示器
+deps.tablayout = 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+//二维码扫描
+deps.bga_qrcode_zxing = 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+//树形结构的库
+deps.treeview = 'com.github.bmelnychuk:atv:1.2.9'
+//图形化库
+deps.mpandroidchart = 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+deps.permissions = 'com.github.hotchemi:permissionsdispatcher:3.3.2'
+deps.annotationPer = 'com.github.hotchemi:permissionsdispatcher-processor:3.3.2'
+//banner库
+deps.bgabanner="cn.bingoogolapple:bga-banner:2.2.6@aar"
+//大图预览
+deps.bigimageshow='com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
+//圆角图
+deps.roundedimageview="com.makeramen:roundedimageview:2.3.0"
+//数据库帮助
+deps.greenDao='org.greenrobot:greendao-gradle-plugin:3.2.2'
+deps.greenDaoLib='org.greenrobot:greendao:3.2.2'
+//用来升级greendao数据库的辅助类
+deps.greenDaoUpdate= 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.0.0'
+//分包
+deps.multidex= 'com.android.support:multidex:1.0.3'
+//日历库
+deps.calendarLib='com.haibin:calendarview:3.6.6'
+//拼音姓名首字母
+deps.pinyin4j= 'com.belerweb:pinyin4j:2.5.0'
+ext.deps = deps

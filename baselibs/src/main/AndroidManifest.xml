@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gsww.baselibs" >
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <activity android:name=".activity.PublicWebviewActivity"/>
+        <activity android:name=".activity.WebAppActivity"/>
+        <activity android:name=".activity.image.FileDisplayActivity"/>
+        <activity android:name=".activity.image.ImageLargeDisplayActivity"/>
+    </application>
+</manifest>

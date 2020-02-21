@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/pickerview_bg_topbar">
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="@dimen/margin_space_10"
+        android:paddingRight="@dimen/margin_space_30"
+        android:text="取消"
+        android:textColor="#808080"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btnSubmit"
+        android:layout_toRightOf="@+id/btnCancel"
+        android:gravity="center"
+        android:textColor="@color/pickerview_topbar_title"
+        android:textSize="@dimen/text_size_small" />
+
+    <Button
+        android:id="@id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="@dimen/margin_space_30"
+        android:paddingRight="@dimen/margin_space_10"
+        android:text="确定"
+        android:textColor="#007FEB"
+        android:textSize="@dimen/text_size_middle" />
+</RelativeLayout>
